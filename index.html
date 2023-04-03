@@ -41,7 +41,7 @@
       </div>
     </div>
   -->
-  
+
     <div class="header">
       <div class="titulo">Driven Eats</div>
       <div class="subtitulo">Sua comida em 6 minutos</div>
@@ -51,7 +51,7 @@
       <div class="secao">
         <div class="titulo">Primeiro, seu prato</div>
         <div class="opcoes pratos">
-          <div data-test="dish" class="opcao prato-frango">
+          <div onclick="selecionarPrato(this)" data-test="dish" class="opcao prato-frango">
             <img src="img/naruto-ramen.jpg" />
             <div data-test="item-name" class="titulo">Frango Yin Yang</div>
             <div class="descricao">Um pouco de batata, um pouco de salada</div>
@@ -61,7 +61,7 @@
             </div>
           </div>
 
-          <div data-test="dish" class="opcao prato-carne">
+          <div onclick="selecionarPrato(this)" data-test="dish" class="opcao prato-carne">
             <img src="img/naruto-ramen.jpg" />
             <div data-test="item-name" class="titulo">Carne Yin Yang</div>
             <div class="descricao">Um pouco de batata, um pouco de salada</div>
@@ -71,7 +71,7 @@
             </div>
           </div>
 
-          <div data-test="dish" class="opcao prato-peixe">
+          <div onclick="selecionarPrato(this)" data-test="dish" class="opcao prato-peixe">
             <img src="img/naruto-ramen.jpg" />
             <div data-test="item-name" class="titulo">Peixe Yin Yang</div>
             <div class="descricao">Um pouco de batata, um pouco de salada</div>
@@ -161,5 +161,6 @@
     </div>
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
