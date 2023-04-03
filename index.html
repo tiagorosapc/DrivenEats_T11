@@ -13,7 +13,7 @@
     <title>Driven Eats</title>
   </head>
   <body>
-    <div class="overlay escondido">
+    <!-- <div class="overlay escondido">
       <div class="confirmar-pedido">
         <div class="titulo">Confirme seu pedido</div>
         <ul>
@@ -40,7 +40,8 @@
         <button class="cancelar">Cancelar</button>
       </div>
     </div>
-
+  -->
+  
     <div class="header">
       <div class="titulo">Driven Eats</div>
       <div class="subtitulo">Sua comida em 6 minutos</div>
@@ -50,31 +51,31 @@
       <div class="secao">
         <div class="titulo">Primeiro, seu prato</div>
         <div class="opcoes pratos">
-          <div class="opcao prato-frango">
+          <div data-test="dish" class="opcao prato-frango">
             <img src="img/naruto-ramen.jpg" />
-            <div class="titulo">Frango Yin Yang</div>
+            <div data-test="item-name" class="titulo">Frango Yin Yang</div>
             <div class="descricao">Um pouco de batata, um pouco de salada</div>
-            <div class="preco">R$ 14,90</div>
+            <div data-test="item-price" data-test="item-price" class="preco">R$ 14,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
           </div>
 
-          <div class="opcao prato-carne">
+          <div data-test="dish" class="opcao prato-carne">
             <img src="img/naruto-ramen.jpg" />
-            <div class="titulo">Carne Yin Yang</div>
+            <div data-test="item-name" class="titulo">Carne Yin Yang</div>
             <div class="descricao">Um pouco de batata, um pouco de salada</div>
-            <div class="preco">R$ 17,90</div>
+            <div data-test="item-price" class="preco">R$ 17,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
           </div>
 
-          <div class="opcao prato-peixe">
+          <div data-test="dish" class="opcao prato-peixe">
             <img src="img/naruto-ramen.jpg" />
-            <div class="titulo">Peixe Yin Yang</div>
+            <div data-test="item-name" class="titulo">Peixe Yin Yang</div>
             <div class="descricao">Um pouco de batata, um pouco de salada</div>
-            <div class="preco">R$ 16,90</div>
+            <div data-test="item-price" class="preco">R$ 16,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
@@ -85,31 +86,31 @@
       <div class="secao">
         <div class="titulo">Agora, sua bebida</div>
         <div class="opcoes bebidas">
-          <div class="opcao bebida-coca">
+          <div data-test="drink" class="opcao bebida-coca">
             <img src="img/coquinha_gelada.png" />
-            <div class="titulo">Coquinha gelada</div>
+            <div data-test="item-name" class="titulo">Coquinha gelada</div>
             <div class="descricao">Lata 350ml</div>
-            <div class="preco">R$ 6,90</div>
+            <div data-test="item-price" class="preco">R$ 6,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
           </div>
 
-          <div class="opcao bebida-guarana">
+          <div data-test="drink" class="opcao bebida-guarana">
             <img src="img/coquinha_gelada.png" />
-            <div class="titulo">Guaraná gelado</div>
+            <div data-test="item-name" class="titulo">Guaraná gelado</div>
             <div class="descricao">Lata 350ml</div>
-            <div class="preco">R$ 4,90</div>
+            <div data-test="item-price" class="preco">R$ 4,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
           </div>
 
-          <div class="opcao bebida-suco" >
+          <div data-test="drink" class="opcao bebida-suco" >
             <img src="img/coquinha_gelada.png" />
-            <div class="titulo">Suquinho gelado</div>
+            <div data-test="item-name" class="titulo">Suquinho gelado</div>
             <div class="descricao">500ml</div>
-            <div class="preco">R$ 7,90</div>
+            <div data-test="item-price" class="preco">R$ 7,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
@@ -120,31 +121,31 @@
       <div class="secao">
         <div class="titulo">Por fim, sua sobremesa</div>
         <div class="opcoes sobremesas">
-          <div class="opcao sobremesa-pudim">
+          <div data-test="dessert" class="opcao sobremesa-pudim">
             <img src="img/pudim.png" />
-            <div class="titulo">Pudim</div>
+            <div data-test="item-name" class="titulo">Pudim</div>
             <div class="descricao">Apenas um pudim</div>
-            <div class="preco">R$ 7,90</div>
+            <div data-test="item-price" class="preco">R$ 7,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
           </div>
 
-          <div class="opcao sobremesa-mousse">
+          <div data-test="dessert" class="opcao sobremesa-mousse">
             <img src="img/pudim.png" />
-            <div class="titulo">Mousse</div>
+            <div data-test="item-name" class="titulo">Mousse</div>
             <div class="descricao">Cremoso, gostoso</div>
-            <div class="preco">R$ 6,90</div>
+            <div data-test="item-price" class="preco">R$ 6,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
           </div>
 
-          <div class="opcao sobremesa-brownie">
+          <div data-test="dessert" class="opcao sobremesa-brownie">
             <img src="img/pudim.png" />
-            <div class="titulo">Brownie</div>
+            <div data-test="item-name" class="titulo">Brownie</div>
             <div class="descricao">É um bolinho</div>
-            <div class="preco">R$ 4,90</div>
+            <div data-test="item-price" class="preco">R$ 4,90</div>
             <div class="check">
               <ion-icon name="checkmark-circle"></ion-icon>
             </div>
@@ -154,7 +155,7 @@
     </div>
 
     <div class="footer">
-      <button class="fazer-pedido" disabled >
+      <button data-test="order-btn" class="fazer-pedido" disabled >
         Selecione os 3 itens<br /> para fechar o pedido
       </button>
     </div>
