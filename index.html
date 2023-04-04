@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="overlay escondido">
-      <div class="confirmar-pedido">
+      <div data-test="confirm-order-modal" class="confirmar-pedido">
         <div class="titulo">Confirme seu pedido</div>
         <ul>
           <li class="prato">
@@ -34,10 +34,10 @@
             <div class="preco-total">R$ **</div>
           </li>
         </ul>
-        <button onclick="fazerPedido()" class="confirmar">
+        <button data-test="confirm-order-btn" onclick="fazerPedido()" class="confirmar">
           Tudo certo, pode pedir!
         </button>
-        <button class="cancelar" onclick="cancelar()">Cancelar</button>
+        <button data-test="cancel-order-btn" class="cancelar" onclick="cancelar()">Cancelar</button>
       </div>
     </div>  
 
