@@ -86,7 +86,7 @@
       <div class="secao">
         <div class="titulo">Agora, sua bebida</div>
         <div class="opcoes bebidas">
-          <div data-test="drink" class="opcao bebida-coca">
+          <div onclick="selecionarBebida(this)" data-test="drink" class="opcao bebida-coca">
             <img src="img/coquinha_gelada.png" />
             <div data-test="item-name" class="titulo">Coquinha gelada</div>
             <div class="descricao">Lata 350ml</div>
@@ -96,7 +96,7 @@
             </div>
           </div>
 
-          <div data-test="drink" class="opcao bebida-guarana">
+          <div onclick="selecionarBebida(this)" data-test="drink" class="opcao bebida-guarana">
             <img src="img/coquinha_gelada.png" />
             <div data-test="item-name" class="titulo">Guaraná gelado</div>
             <div class="descricao">Lata 350ml</div>
@@ -106,7 +106,7 @@
             </div>
           </div>
 
-          <div data-test="drink" class="opcao bebida-suco" >
+          <div onclick="selecionarBebida(this)" data-test="drink" class="opcao bebida-suco" >
             <img src="img/coquinha_gelada.png" />
             <div data-test="item-name" class="titulo">Suquinho gelado</div>
             <div class="descricao">500ml</div>
@@ -121,7 +121,7 @@
       <div class="secao">
         <div class="titulo">Por fim, sua sobremesa</div>
         <div class="opcoes sobremesas">
-          <div data-test="dessert" class="opcao sobremesa-pudim">
+          <div onclick="selecionarSobremesa(this)" data-test="dessert" class="opcao sobremesa-pudim">
             <img src="img/pudim.png" />
             <div data-test="item-name" class="titulo">Pudim</div>
             <div class="descricao">Apenas um pudim</div>
@@ -131,7 +131,7 @@
             </div>
           </div>
 
-          <div data-test="dessert" class="opcao sobremesa-mousse">
+          <div onclick="selecionarSobremesa(this)" data-test="dessert" class="opcao sobremesa-mousse">
             <img src="img/pudim.png" />
             <div data-test="item-name" class="titulo">Mousse</div>
             <div class="descricao">Cremoso, gostoso</div>
@@ -141,7 +141,7 @@
             </div>
           </div>
 
-          <div data-test="dessert" class="opcao sobremesa-brownie">
+          <div onclick="selecionarSobremesa(this)" data-test="dessert" class="opcao sobremesa-brownie">
             <img src="img/pudim.png" />
             <div data-test="item-name" class="titulo">Brownie</div>
             <div class="descricao">É um bolinho</div>
@@ -155,7 +155,7 @@
     </div>
 
     <div class="footer">
-      <button data-test="order-btn" class="fazer-pedido" disabled >
+      <button onclick="alert('oi')" data-test="order-btn" class="fazer-pedido" disabled >
         Selecione os 3 itens<br /> para fechar o pedido
       </button>
     </div>
