@@ -13,7 +13,7 @@
     <title>Driven Eats</title>
   </head>
   <body>
-    <!-- <div class="overlay escondido">
+    <div class="overlay escondido">
       <div class="confirmar-pedido">
         <div class="titulo">Confirme seu pedido</div>
         <ul>
@@ -34,13 +34,12 @@
             <div class="preco-total">R$ **</div>
           </li>
         </ul>
-        <button class="confirmar">
+        <button onclick="fazerPedido()" class="confirmar">
           Tudo certo, pode pedir!
         </button>
-        <button class="cancelar">Cancelar</button>
+        <button class="cancelar" onclick="cancelar()">Cancelar</button>
       </div>
-    </div>
-  -->
+    </div>  
 
     <div class="header">
       <div class="titulo">Driven Eats</div>
@@ -155,7 +154,7 @@
     </div>
 
     <div class="footer">
-      <button onclick="fazerPedido()" data-test="order-btn" class="fazer-pedido" disabled >
+      <button onclick="confirmarPedido()" data-test="order-btn" class="fazer-pedido" disabled >
         Selecione os 3 itens<br /> para fechar o pedido
       </button>
     </div>

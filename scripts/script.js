@@ -110,8 +110,68 @@ function selecionarSobremesa(sobremesa){
     liberarBotaoFinalizaPedido();
 }*/
 
+
+function confirmarPedido(){
+    // 1 - pegar a div com a classe overlay
+    const overlay = document.querySelector('.overlay');    
+    // 2 - remover a classe escondido
+    overlay.classList.remove('escondido');
+    // 3 - pegar a div com a classe nome (prato)
+    const divNomePrato = overlay.querySelector('.prato .nome');    
+    // 4 - colocar na div o nome do prato que esta na variavel tPrato
+    divNomePrato.innerHTML = tPrato;
+    // 5 - pegar a div com a classe preco ( prato )
+    const divPrecoPrato = overlay.querySelector('.prato .preco');
+    // 6 - colocar na div o preco do prato que esta na variavel pPrato
+    divPrecoPrato.innerHTML = pPrato;
+    // 7 - pegar a div com a classe nome (bebida)
+    const divNomeBebida = overlay.querySelector('.bebida .nome');
+    // 8 - colocar na div o nome da bebida que esta na variavel tBebida
+    divNomeBebida.innerHTML = tBebida;
+    // 9 - pegar a div com a classe preco ( bebida )
+    const divPrecoBebida = overlay.querySelector('.bebida .preco');
+    // 10 - colocar na div o preco da bebida que esta na variavel pBebida
+    divPrecoBebida.innerHTML = pBebida;
+    // 11 - pegar a div com a classe nome (sobremesa)
+    const divNomeSobremesa = overlay.querySelector('.sobremesa .nome');
+    // 12 - colocar na div o nome da sobremesa que esta na variavel tsobremesa
+    divNomeSobremesa.innerHTML = tSobremesa;
+    // 13 - pegar a div com a classe preco ( sobremesa )
+    const divPrecoSobremesa = overlay.querySelector('.sobremesa .preco');
+    // 14 - colocar na div o preco da sobremesa que esta na variavel psobremesa
+    divPrecoSobremesa.innerHTML = pSobremesa;
+    // 15 - pegar a div com a classe preco-total e colocar o valor da varial total 
+    const valTotal = calculaValorTotal();
+
+    const divTotal = overlay.querySelector('.preco-total');
+    divTotal.innerHTML = valTotal;
+}
+
 function fazerPedido(){
 
+    const nome = prompt('Qual o seu nome?');
+    const endereco = prompt('Endereço para entrega?');
+
+    const total = calculaValorTotal();
+
+    const  mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: ${tPrato}
+    - Bebida: ${tBebida}
+    - Sobremesa: ${tSobremesa}
+    Total: R$ ${total}
+    
+    Nome: ${nome}
+    Endereço: ${endereco}`;    
+
+    // codificando a mesangem para o whatsapp
+    const mensWP = encodeURIComponent(mensagem);
+
+    // abrindo o WhatsApp e enviando a mesangem
+    window.open(`https://wa.me/5599999999999?text=${mensWP}`);
+
+}
+
+function calculaValorTotal(){
     
     let precoPrato = pPrato.replace('R$', '');
     precoPrato = precoPrato.replace(',', '.');
@@ -125,18 +185,13 @@ function fazerPedido(){
     precoSobremesa = precoSobremesa.replace(',', '.');
     precoSobremesa = Number(precoSobremesa);
 
-    const total = precoPrato + precoBedida + precoSobremesa;
+    const valorTotal = precoPrato + precoBedida + precoSobremesa;
 
-    const  mensagem = `Olá, gostaria de fazer o pedido:
-    - Prato: ${tPrato}
-    - Bebida: ${tBebida}
-    - Sobremesa: ${tSobremesa}
-    Total: R$ ${total.toFixed(2)}`;    
+    return valorTotal.toFixed(2);
 
-    // codificando a mesangem para o whatsapp
-    const mensWP = encodeURIComponent(mensagem);
+}
 
-    // abrindo o WhatsApp e enviando a mesangem
-    window.open(`https://wa.me/5599999999999?text=${mensWP}`);
-
+function cancelar(){
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.add('escondido');
 }
